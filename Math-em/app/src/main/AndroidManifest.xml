@@ -18,6 +18,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".GameActivity" />
+        <activity
+            android:name=".gameover"
+            android:label="@string/title_activity_gameover" >
+        </activity>
     </application>
 
 </manifest>
