@@ -10,26 +10,20 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 
-public class MainActivity extends Activity {
+public class GameActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        final ImageButton play = (ImageButton) findViewById(R.id.PlayButton);
-        play.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Perform action on click
-                Intent intent = new Intent(MainActivity.this, GameActivity.class);
-            }
-        });
+        setContentView(R.layout.activity_game);
+
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_game, menu);
         return true;
     }
 
