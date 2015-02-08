@@ -18,10 +18,12 @@
 
             <!--<LinearLayout android:orientation="horizontal">-->
             <TextView
+                android:text="200"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/timer"
                 android:layout_weight="1"
+                android:editable="false"
             />
         </TableRow>
 
@@ -31,7 +33,7 @@
             android:layout_weight="30"
             android:gravity="center">
 
-            <EditText
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText"
@@ -39,7 +41,8 @@
                 android:selectAllOnFocus="false"
                 android:textIsSelectable="true"
                 android:typeface="normal"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:editable="false"/>
 
         </TableRow>
 
@@ -49,7 +52,7 @@
             android:layout_weight="20"
             android:gravity="center">
 
-            <EditText
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText2"
@@ -63,7 +66,7 @@
             android:layout_weight="20"
             android:gravity="center">
 
-            <EditText
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText3"
@@ -77,7 +80,7 @@
             android:layout_weight="20"
             android:gravity="center">
 
-            <EditText
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText4"

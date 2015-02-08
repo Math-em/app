@@ -7,6 +7,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.io.IOException;
 import java.lang.*;
 
@@ -16,22 +18,23 @@ public class GameActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-            {
-            int i;
+        int x = 3;
+        {
+            while (x>=0) {
+            try {
+                Thread.sleep(1);
+                TextView timer = (TextView) findViewById(R.id.timer);
+                timer.setText(Integer.toString(x));
+                x -= 1;
+            } catch (InterruptedException e) {
 
-            for (i = 3; i > 0; i-=1);
-            {
-                try {
-                    Thread.sleep(1000);
-                    TextView timer = (TextView) findViewById(R.id.timer);
-                    timer.setText(Integer.toString(i));
-                } catch (InterruptedException e){
-
-                }
             }
         }
 
-}
+             }
+        }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
