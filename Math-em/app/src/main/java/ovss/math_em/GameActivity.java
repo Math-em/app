@@ -5,10 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
+import android.widget.TextView;
 
+import java.io.IOException;
+import java.lang.*;
 
 public class GameActivity extends Activity {
 
@@ -16,16 +16,22 @@ public class GameActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-//        final Button play = (Button) findViewById(R.id.PlayButton);
-//        play.setOnClickListener (new View.OnClickListener() {
-//            public void onClick(View v) {
-//                // Perform action on click
-//                Intent intent = new Intent(v.getContext(), GameActivity.class);
-//                startActivityForResult(intent, 0);
-//            }
-//        });
-}
+            {
+            int i;
 
+            for (i = 3; i > 0; i-=1);
+            {
+                try {
+                    Thread.sleep(1000);
+                    TextView timer = (TextView) findViewById(R.id.timer);
+                    timer.setText(Integer.toString(i));
+                } catch (InterruptedException e){
+
+                }
+            }
+        }
+
+}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
