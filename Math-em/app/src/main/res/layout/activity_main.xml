@@ -6,13 +6,13 @@
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
     android:background="#ff9fe8ff">
 
-    <ImageButton
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/PlayButton"
         android:adjustViewBounds="true"
         android:background="@drawable/play_button"
-
+        android:onClick="sendMessage"
         android:layout_above="@+id/HighScore"
         android:layout_centerHorizontal="true" />
 

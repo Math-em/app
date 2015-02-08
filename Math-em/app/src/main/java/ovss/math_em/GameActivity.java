@@ -13,11 +13,18 @@ import android.widget.ImageButton;
 public class GameActivity extends Activity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-
-    }
+//        final Button play = (Button) findViewById(R.id.PlayButton);
+//        play.setOnClickListener (new View.OnClickListener() {
+//            public void onClick(View v) {
+//                // Perform action on click
+//                Intent intent = new Intent(v.getContext(), GameActivity.class);
+//                startActivityForResult(intent, 0);
+//            }
+//        });
+}
 
 
     @Override
