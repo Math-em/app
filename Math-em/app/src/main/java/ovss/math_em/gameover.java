@@ -1,19 +1,34 @@
 package ovss.math_em;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class gameover extends Activity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gameover);
+        final Button goHomeButton = (Button) findViewById(R.id.goHome);
+        final Button tryAgainButton = (Button) findViewById(R.id.tryAgain);
+        goHomeButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(gameover.this, MainActivity.class);
+                startActivityForResult(intent, 0);
+                tryAgainButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick (View v) {
+                Intent intent = new Intent(gameover.this, GameActivity.class);
+                startActivityForResult(intent, 0);
+            }
+        });
+            }
+        });
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
