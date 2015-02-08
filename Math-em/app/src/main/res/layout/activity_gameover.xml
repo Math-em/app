@@ -7,7 +7,7 @@
     android:background="#ff9fe8ff">
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
         android:layout_alignParentTop="true"
@@ -20,8 +20,8 @@
         android:id="@+id/imageButton"
         android:background="@drawable/go_home"
         android:layout_below="@+id/imageView"
-        android:layout_alignLeft="@+id/imageView"
-        android:layout_alignStart="@+id/imageView" />
+        android:layout_alignLeft="@+id/imageButton2"
+        android:layout_alignStart="@+id/imageButton2" />
 
     <ImageButton
         android:layout_width="wrap_content"
