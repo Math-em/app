@@ -10,14 +10,21 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:exported= "true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GameActivity" />
+        <activity android:name=".GameActivity"
+        android:exported="true"/>
+        <activity
+            android:name=".gameover"
+            android:label="@string/title_activity_gameover"
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>
